@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cây Cảnh</title>
+    <link rel="stylesheet" href="./Assets/Css/chiTiet_Category.css">
+    <link rel="stylesheet" href="./Assets/Css/Base.css">
+    <link rel="stylesheet" href="./Assets/Css/trangChu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/Front/fontawesome-6.2.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="icon" type="image/x-icon" href="./Assets/Img/logo.png">
+    <script src="./Assets/JS/chiTietCategory.js"></script>
+    <script src="./Assets/JS/Chung.js"></script>
+    <script src="./Assets/data/product.js"></script>
+    <script src="./Assets/JS/Classes.js"></script>
+    <script src="./Assets/JS/Toast.js"></script>
+</head>
+<body>
+    <div class="main">
+        <!-- Header navigation -->
+        <header class="header">
+            <div class="grid">
+                <script> addTopNav(); </script>
+
+                <!-- Header with search -->
+                <script> addHeader(); </script>
+            </div>
+        </header>
+
+        <!-- Main container -->
+        <div class="main__container">
+            <div class="main-category__header">
+                <div class="grid">
+                    <div class="category__header">
+                        <div class="category__bread-crum">
+                            <a href="trangChu.html" class="category__bread-crum__link">Trang Chủ</a>
+                            <i class="category__bread-crumb__icon fa-solid fa-angle-right"></i>
+                            <a href="chiTiet_Category.html" class="category__bread-crum__link">Cây Cảnh</a>
+                        </div>
+                        <div class="category-filter">
+                            <span class="category-filter__label">Sắp xếp theo</span>
+                            <div class="select-input__price select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="select-input__icon fa-solid fa-chevron-down"></i>
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Dưới 100K</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Từ 100K - 200K</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Từ 200K - 400kK</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Từ 400K - 600K</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Trên 600K</a>
+                                    </li>
+                                </ul>
+                            </div>
+        
+                            <div class="select-input__sort select-input">
+                                <span class="select-input__label">Sắp xếp</span>
+                                <i class="select-input__icon fa-solid fa-chevron-down"></i>
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Thấp đến Cao</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Cao đến Thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products -->
+            <div class="category_main-prouduct">
+                <div class="grid">
+                    <div class="category__label">Cây cảnh</div>
+                    <div class="grid__row">
+                        <div class="grid__column-10">
+                            <div class="category-product">
+                                <div class="grid__row">
+                                    <div class="grid__column-2-6">
+                                        <a href="chiTietSanPham_coMayMan.html" class="category-product-item">
+                                            <div class="category-product-item-img__wrap">
+                                                <img src="./Assets/Img/Co_May_Man.png" alt="Ảnh cây" class="category-product-item__img">
+                                            </div>
+                                            <h4 class="category-product-item__name">Cỏ May Mắn</h4>
+                                            <div class="category-product-item-price">
+                                                <span class="category-product-item-price-old">350.000đ</span>
+                                                <span class="category-product-item-price-current">250.000đ</span>
+                                            </div>
+                                            <div class="category-product-item__state">
+                                                <div class="category-product-item__status">
+                                                    <i class="category-product-item__status-icon fa-solid fa-check"></i>
+                                                    <span class="category-product-item__status-name">Còn hàng</span>
+                                                </div>
+                                                <div class="category-product-item__add-cart">
+                                                    <p><i class="category-product-item__cart-icon fa-solid fa-cart-shopping"></i></p>
+                                                </div>
+                                            </div>
+                                            <div class="category-product-item__sale-off">
+                                                <span class="category-product-item__sale-off-percent">7%</span>
+                                                <span class="category-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="grid__column-2-6">
+                                        <a href="chiTietSanPham_coMayMan.html" class="category-product-item">
+                                            <div class="category-product-item-img__wrap">
+                                                <img src="./Assets/Img/Co_May_Man.png" alt="Ảnh cây" class="category-product-item__img">
+                                            </div>
+                                            <h4 class="category-product-item__name">Cỏ May Mắn</h4>
+                                            <div class="category-product-item-price">
+                                                <span class="category-product-item-price-old">350.000đ</span>
+                                                <span class="category-product-item-price-current">250.000đ</span>
+                                            </div>
+                                            <div class="category-product-item__state">
+                                                <div class="category-product-item__status">
+                                                    <i class="category-product-item__status-icon fa-solid fa-check"></i>
+                                                    <span class="category-product-item__status-name">Còn hàng</span>
+                                                </div>
+                                                <div class="category-product-item__add-cart">
+                                                    <p><i class="category-product-item__cart-icon fa-solid fa-cart-shopping"></i></p>
+                                                </div>
+                                            </div>
+                                            <div class="category-product-item__sale-off">
+                                                <span class="category-product-item__sale-off-percent">7%</span>
+                                                <span class="category-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="grid__column-2-6">
+                                        <a href="chiTietSanPham_coMayMan.html" class="category-product-item">
+                                            <div class="category-product-item-img__wrap">
+                                                <img src="./Assets/Img/Co_May_Man.png" alt="Ảnh cây" class="category-product-item__img">
+                                            </div>
+                                            <h4 class="category-product-item__name">Cỏ May Mắn</h4>
+                                            <div class="category-product-item-price">
+                                                <span class="category-product-item-price-old">350.000đ</span>
+                                                <span class="category-product-item-price-current">250.000đ</span>
+                                            </div>
+                                            <div class="category-product-item__state">
+                                                <div class="category-product-item__status">
+                                                    <i class="category-product-item__status-icon fa-solid fa-check"></i>
+                                                    <span class="category-product-item__status-name">Còn hàng</span>
+                                                </div>
+                                                <div class="category-product-item__add-cart">
+                                                    <p><i class="category-product-item__cart-icon fa-solid fa-cart-shopping"></i></p>
+                                                </div>
+                                            </div>
+                                            <div class="category-product-item__sale-off">
+                                                <span class="category-product-item__sale-off-percent">7%</span>
+                                                <span class="category-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="grid__column-2-6">
+                                        <a href="chiTietSanPham_coMayMan.html" class="category-product-item">
+                                            <div class="category-product-item-img__wrap">
+                                                <img src="./Assets/Img/Co_May_Man.png" alt="Ảnh cây" class="category-product-item__img">
+                                            </div>
+                                            <h4 class="category-product-item__name">Cỏ May Mắn</h4>
+                                            <div class="category-product-item-price">
+                                                <span class="category-product-item-price-old">350.000đ</span>
+                                                <span class="category-product-item-price-current">250.000đ</span>
+                                            </div>
+                                            <div class="category-product-item__state">
+                                                <div class="category-product-item__status">
+                                                    <i class="category-product-item__status-icon fa-solid fa-check"></i>
+                                                    <span class="category-product-item__status-name">Còn hàng</span>
+                                                </div>
+                                                <div class="category-product-item__add-cart">
+                                                    <p><i class="category-product-item__cart-icon fa-solid fa-cart-shopping"></i></p>
+                                                </div>
+                                            </div>
+                                            <div class="category-product-item__sale-off">
+                                                <span class="category-product-item__sale-off-percent">7%</span>
+                                                <span class="category-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="grid__column-2-6">
+                                        <a href="chiTietSanPham_coMayMan.html" class="category-product-item">
+                                            <div class="category-product-item-img__wrap">
+                                                <img src="./Assets/Img/Co_May_Man.png" alt="Ảnh cây" class="category-product-item__img">
+                                            </div>
+                                            <h4 class="category-product-item__name">Cỏ May Mắn</h4>
+                                            <div class="category-product-item-price">
+                                                <span class="category-product-item-price-old">350.000đ</span>
+                                                <span class="category-product-item-price-current">250.000đ</span>
+                                            </div>
+                                            <div class="category-product-item__state">
+                                                <div class="category-product-item__status">
+                                                    <i class="category-product-item__status-icon fa-solid fa-check"></i>
+                                                    <span class="category-product-item__status-name">Còn hàng</span>
+                                                </div>
+                                                <div class="category-product-item__add-cart">
+                                                    <p><i class="category-product-item__cart-icon fa-solid fa-cart-shopping"></i></p>
+                                                </div>
+                                            </div>
+                                            <div class="category-product-item__sale-off">
+                                                <span class="category-product-item__sale-off-percent">7%</span>
+                                                <span class="category-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="grid__column-2-6">
+                                        <a href="chiTietSanPham_coMayMan.html" class="category-product-item">
+                                            <div class="category-product-item-img__wrap">
+                                                <img src="./Assets/Img/Co_May_Man.png" alt="Ảnh cây" class="category-product-item__img">
+                                            </div>
+                                            <h4 class="category-product-item__name">Cỏ May Mắn</h4>
+                                            <div class="category-product-item-price">
+                                                <span class="category-product-item-price-old">350.000đ</span>
+                                                <span class="category-product-item-price-current">250.000đ</span>
+                                            </div>
+                                            <div class="category-product-item__state">
+                                                <div class="category-product-item__status">
+                                                    <i class="category-product-item__status-icon fa-solid fa-check"></i>
+                                                    <span class="category-product-item__status-name">Còn hàng</span>
+                                                </div>
+                                                <div class="category-product-item__add-cart">
+                                                    <p><i class="category-product-item__cart-icon fa-solid fa-cart-shopping"></i></p>
+                                                </div>
+                                            </div>
+                                            <div class="category-product-item__sale-off">
+                                                <span class="category-product-item__sale-off-percent">7%</span>
+                                                <span class="category-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="grid__column-2-6">
+                                        <a href="chiTietSanPham_coMayMan.html" class="category-product-item">
+                                            <div class="category-product-item-img__wrap">
+                                                <img src="./Assets/Img/Co_May_Man.png" alt="Ảnh cây" class="category-product-item__img">
+                                            </div>
+                                            <h4 class="category-product-item__name">Cỏ May Mắn</h4>
+                                            <div class="category-product-item-price">
+                                                <span class="category-product-item-price-old">350.000đ</span>
+                                                <span class="category-product-item-price-current">250.000đ</span>
+                                            </div>
+                                            <div class="category-product-item__state">
+                                                <div class="category-product-item__status">
+                                                    <i class="category-product-item__status-icon fa-solid fa-check"></i>
+                                                    <span class="category-product-item__status-name">Còn hàng</span>
+                                                </div>
+                                                <div class="category-product-item__add-cart">
+                                                    <p><i class="category-product-item__cart-icon fa-solid fa-cart-shopping"></i></p>
+                                                </div>
+                                            </div>
+                                            <div class="category-product-item__sale-off">
+                                                <span class="category-product-item__sale-off-percent">7%</span>
+                                                <span class="category-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="grid__column-2-6">
+                                        <a href="chiTietSanPham_coMayMan.html" class="category-product-item">
+                                            <div class="category-product-item-img__wrap">
+                                                <img src="./Assets/Img/Co_May_Man.png" alt="Ảnh cây" class="category-product-item__img">
+                                            </div>
+                                            <h4 class="category-product-item__name">Cỏ May Mắn</h4>
+                                            <div class="category-product-item-price">
+                                                <span class="category-product-item-price-old">350.000đ</span>
+                                                <span class="category-product-item-price-current">250.000đ</span>
+                                            </div>
+                                            <div class="category-product-item__state">
+                                                <div class="category-product-item__status">
+                                                    <i class="category-product-item__status-icon fa-solid fa-check"></i>
+                                                    <span class="category-product-item__status-name">Còn hàng</span>
+                                                </div>
+                                                <div class="category-product-item__add-cart">
+                                                    <p><i class="category-product-item__cart-icon fa-solid fa-cart-shopping"></i></p>
+                                                </div>
+                                            </div>
+                                            <div class="category-product-item__sale-off">
+                                                <span class="category-product-item__sale-off-percent">7%</span>
+                                                <span class="category-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="grid__column-2">
+                            <nav class="category">
+                                <h3 class="category__heading">
+                                    <i class="category__heading-icon fa-solid fa-list"></i>
+                                    Danh mục
+                                </h3>
+                                <ul class="category-list">
+                                    <li class="category-item">
+                                        <a href="chiTiet_Category.html" class="category-item__link">
+                                            Cây Cảnh
+                                        </a>
+                                    </li>
+                                    <li class="category-item">
+                                        <a href="#" class="category-item__link">
+                                            Cây Công Trình
+                                        </a>
+                                    </li>
+                                    <li class="category-item">
+                                        <a href="#" class="category-item__link">
+                                            Cây Giống
+                                        </a>
+                                    </li>
+                                    <li class="category-item">
+                                        <a href="#" class="category-item__link">
+                                            Cây Ăn Quả
+                                        </a>
+                                    </li>
+                                    <li class="category-item">
+                                        <a href="#" class="category-item__link">
+                                            Hoa Chậu
+                                        </a>
+                                    </li>
+                                    <li class="category-item">
+                                        <a href="#" class="category-item__link">
+                                            Hoa Sự Kiện
+                                        </a>
+                                    </li>
+                                    <li class="category-item">
+                                        <a href="#" class="category-item__link">
+                                            Hạt Giống
+                                        </a>
+                                    </li>
+                                    <li class="category-item">
+                                        <a href="#" class="category-item__link">
+                                            Chậu Cảnh
+                                        </a>
+                                    </li>
+                                    <li class="category-item">
+                                        <a href="#" class="category-item__link">
+                                            Tiểu Cảnh/Sân Vườn
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="grid__column-10">
+                        <ul class="pagination home-product__pagination">
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fa-solid fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="pagination-item pagination-item--active">
+                                <a href="" class="pagination-item__link">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">3</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">4</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">5</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">...</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">14</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fa-solid fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            <div class="grid__full-width">
+                <div class="grid__row">
+                    <script>addFooter();</script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="toast"></div>
+    <script>
+		addContainTaiKhoan();
+	</script>
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+</body>
+</html>

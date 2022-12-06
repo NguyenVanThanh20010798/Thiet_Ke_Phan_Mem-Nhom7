@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create Product</title>
+
+	<!-- Load font awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/home_products.css">
+
+	<script src="./Assets/data/product.js"></script>
+	<script src="./Assets/JS/Classes.js"></script>
+	<script src="./Assets/JS/Chung.js"></script>
+
+	<style>
+		* { 
+			outline: none; 
+			font-family: sans-serif; 
+		}
+		
+		table {
+			padding: 5px 3px;
+			border : 1px solid #333;
+			margin: 10px auto;
+		}
+		td {
+			padding: 5px 3px;
+			border-bottom: 1pt solid #333;
+		}
+		input {
+			padding: 5px 3px;
+			height: 26px;
+			font-size: 20px;
+		}
+		button {
+			border-radius: 10px;
+			margin: 10px auto;
+			font-size: 20px;
+			padding: 10px 5px;
+			border: none;
+			cursor: pointer;
+			background: #487;
+		}
+		button:hover {
+			background: #4a7;
+		}
+		textarea {
+			padding: 5px 3px;
+			font-size: 16px;
+		}
+	</style>
+
+	<script>
+		function getResult() {
+			var name = document.getElementById('name').value;
+			var category = document.getElementById('category').value;
+			var img = document.getElementById('img').value;
+			var img1 = document.getElementById('img1').value;
+			var img2 = document.getElementById('img2').value;
+			var img3 = document.getElementById('img3').value;
+			var price = document.getElementById('price').value;
+			var maSp = document.getElementById('masp').value;
+			var promoName = document.getElementById('promoName').value;
+            var description = document.getElementById('description').value;
+            var introduce = document.getElementById('introduce').value;
+            var characteristics = document.getElementById('characteristics').value;
+            var meaningful = document.getElementById('meaningful').value;
+            var howtoplant = document.getElementById('howtoplant').value;
+
+			if(img.indexOf('http') < 0 && img1.indexOf('http') < 0 && img2.indexOf('http') < 0 && img3.indexOf('http') < 0) {
+				img = "Assets/Img/Cay_Canh/"+ img;
+				img1 = "Assets/Img/Cay_Canh/"+ img1;
+				img2 = "Assets/Img/Cay_Canh/"+ img2;
+				img3 = "Assets/Img/Cay_Canh/"+ img3;
+			}
+return {
+	"name": name,
+	"category": category,
+	"img": img,
+	"img2": img1,
+	"img3": img2,
+	"img4": img3,
+	"price": price,
+    "masp": maSp,
+	"promo": {
+		"name": promoName,
+	},
+    "detail": {
+        "description": description,
+        "detailProduct": {
+            "gioithieu": introduce,
+            "dacdiem": characteristics,
+            "congdung": meaningful,
+            "cachtrong": howtoplant
+        }
+    }
+};
+		}
+
+		function saveToDatabase() {
+			var r = getResult();
+			if(!r.name || !r.price) {
+				alert('Chưa nhập tên hoặc giá tiền');
+				return;
+			}
+
+			// addProduct(r, 'products');
+			var textarea = document.getElementById('t_a');
+			if(textarea.innerHTML == '')
+				textarea.innerHTML += JSON.stringify(r, null, "\t");
+			else textarea.innerHTML += ',\n'+JSON.stringify(r, null, "\t");
+		}
+	</script>
+
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td>
+				<table cellpadding="7">
+					<tr>
+						<td>Tên sản phẩm:</td>
+						<td><input id="name" type="text" onchange=""></td>
+					</tr>
+					<tr>
+						<td>Tên Thể Loại:</td>
+						<td>
+							<select name="" id="category">
+								<option value="Cây Cảnh">Cây Cảnh</option>
+								<option value="Cây Công Trình">Cây Công Trình</option>
+								<option value="Cây Giống">Cây Giống</option>
+								<option value="Cây Ăn Quả">Cây Ăn Quả</option>
+								<option value="Hoa Chậu">Hoa Chậu</option>
+								<option value="Hoa Sự Kiện">Hoa Sự Kiện</option>
+								<option value="Hạt Giống">Hạt Giống</option>
+								<option value="Chậu Cảnh">Chậu Cảnh</option>
+								<option value="Tiểu Cảnh">Tiểu Cảnh</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Tên file ảnh chính</td>
+						<td><input id="img" type="text"></td>
+					</tr>
+                    <tr>
+						<td>Tên file ảnh slider1</td>
+						<td><input id="img1" type="text"></td>
+					</tr>
+                    <tr>
+						<td>Tên file ảnh slider2</td>
+						<td><input id="img2" type="text"></td>
+					</tr>
+                    <tr>
+						<td>Tên file ảnh slider3</td>
+						<td><input id="img3" type="text"></td>
+					</tr>
+					<tr>
+						<td>Giá tiền:</td>
+						<td><input id="price" type="text"></td>
+					</tr>
+                    <tr>
+						<td>Mã Sản phẩm:</td>
+						<td><input id="masp" type="text"></td>
+					</tr>
+                    <tr>
+						<td>Filter:</td>
+						<td>
+							<select name="km" id="promoName" onchange="valueChange()">
+								<option value="caycanh">Cây Cảnh</option>
+                                <option value="caycongtrinh">Cây Công Trình</option>
+                                <option value="caygiong">Cây Giống</option>
+                                <option value="cayanqua">Cây Ăn Quả</option>
+                                <option value="hoachau">Hoa Chậu</option>
+                                <option value="caycanh">Hoa Sự Kiện</option>
+                                <option value="caycongtrinh">Hạt Giống</option>
+                                <option value="caygiong">Chậu Cảnh</option>
+                                <option value="tieucanh">Tiểu Cảnh/Sân Vườn</option>
+							</select>
+						</td>
+					</tr>
+                    <tr>
+                        <td>Mô Tả</td>
+                        <td><textarea id="description" name="moTa" rows="5" cols="80"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Giới thiệu</td>
+                        <td><textarea id="introduce" name="moTa" rows="5" cols="80"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Đặc điểm</td>
+                        <td><textarea id="characteristics" name="moTa" rows="5" cols="80"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Công dụng/Ý nghĩa</td>
+                        <td><textarea id="meaningful" name="moTa" rows="5" cols="80"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Cách trồng</td>
+                        <td><textarea id="howtoplant" name="moTa" rows="5" cols="80"></textarea></td>
+                    </tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<button onclick="saveToDatabase()">Lưu vào database</button>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<p>Kết quả Database:</p>
+				<textarea rows="13" cols="70" id="t_a"></textarea>
+			</td>
+		</tr>
+	</table>
+
+</body>
+
+</html>

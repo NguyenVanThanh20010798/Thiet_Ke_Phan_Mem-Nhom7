@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Beautiful</title>
+    <link rel="stylesheet" href="./Assets/Css/trangChu.css">
+    <link rel="stylesheet" href="./Assets/Css/Base.css">
+    <link rel="stylesheet" href="./Assets/Css/Category.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/Front/fontawesome-6.2.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="icon" type="image/x-icon" href="./Assets/Img/logo.png">
+
+    <script src="./Assets/JS/Jquery/Jquery.min.js"></script>
+    <script src="./Assets/data/product.js"></script>
+    <script src="./Assets/JS/trangChu.js"></script>
+    <script src="./Assets/JS/Chung.js"></script>
+    <script src="./Assets/JS/Classes.js"></script>
+    <script src="./Assets/JS/Toast.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <!-- Header navigation -->
+        <header class="header">
+            <div class="grid">
+                <script> addTopNav(); </script>
+
+                <!-- Header with search -->
+                <script> addHeader(); </script>
+            </div>
+        </header>
+
+        <!-- Main container -->
+        <div class="main__container">
+            <div class="main-category__header" style="display: none;">
+                <div class="category__header">
+                    <div class="category-filter">
+                        <span class="category-filter__label">Sắp xếp theo</span>
+                        <div class="select-input__price select-input">
+                            <span class="select-input__label">Giá</span>
+                            <i class="select-input__icon fa-solid fa-chevron-down"></i>
+                            <ul class="select-input__list">
+                                <li class="select-input__item">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="select-input__sort select-input">
+                            <span class="select-input__label">Sắp xếp</span>
+                            <i class="select-input__icon fa-solid fa-chevron-down"></i>
+                            <ul class="select-input__list-price">
+                                <li class="select-input__item">
+                                    <!-- <a href="" class="select-input__link">Giá: Thấp đến Cao</a> -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid__row main__content">
+                    <div class="grid__column-2 category__wrap">
+                        <nav class="category">
+                            <ul class="category-list">
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="grid__column-10 grid-content home-slide__wrap">
+                        <div class="grid__column-2-5 slider">
+                            <div class="home-slide">
+                                <input type="radio" name="radio-btn" id="home__slide-radio1">
+                                <input type="radio" name="radio-btn" id="home__slide-radio2">
+                                <input type="radio" name="radio-btn" id="home__slide-radio3">
+                                <input type="radio" name="radio-btn" id="home__slide-radio4">
+                                <div class="home__slide-img first">
+                                    <img src="./Assets/Img/Slide/slide5.jpg" alt="Ảnh slide" class="slide-img">
+                                </div>
+                                <div class="home__slide-img">
+                                    <img src="./Assets/Img/Slide/slider6.jpg" alt="Ảnh slide" class="slide-img">
+                                </div>
+                                <div class="home__slide-img">
+                                    <img src="./Assets/Img/Slide/slider7.jpg" alt="Ảnh slide" class="slide-img">
+                                </div>
+                                <div class="home__slide-img">
+                                    <img src="./Assets/Img/Slide/vuon-cay-viet-banner-new.jpg" alt="Ảnh slide" class="slide-img">
+                                </div>
+
+                                <div class="Slider-auto">
+                                    <div class="auto-btn1"></div>
+                                    <div class="auto-btn2"></div>
+                                    <div class="auto-btn3"></div>
+                                    <div class="auto-btn4"></div>
+                                </div>
+                            </div>
+                            <div class="Slider-manual">
+                                <label for="home__slide-radio1" class="manual-btn"></label>
+                                <label for="home__slide-radio2" class="manual-btn"></label>
+                                <label for="home__slide-radio3" class="manual-btn"></label>
+                                <label for="home__slide-radio4" class="manual-btn"></label>
+                            </div>
+                        </div>
+
+                        <div class="grid__column-2-4">
+                            <div class="home-banner">
+                                <img src="./Assets/Img/Hat_Giong/hat-giong-hoa-tulip.png" alt="" class="home__banner-img">
+                                <img src="./Assets/Img/Hat_Giong/hat-giong-cay-sen-da-1.jpg.png" alt="" class="home__banner-img">
+                                <img src="./Assets/Img/tieu_canh/cay-hoa-giay-1.jpg" alt="" class="home__banner-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mặc định mới vào trang sẽ ẩn đi, nế có filter thì mới hiện lên -->
+                    <div class="contain-products" style="display:none">
+                        <div class="contain-products__label">
+                        </div>
+                        <div class="home-product">
+                            <div class="grid__row" id="products">
+                            </div>
+                        </div>
+
+                        <div class="pagination"></div>
+                    </div>
+
+                    <div class="home-product__general">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="grid__full-width">
+                <div class="grid__row">
+                    <script>addFooter();</script>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="toast"></div>
+    <script>
+        addContainTaiKhoan();
+    </script>
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+    <script src="./Assets/JS/Slide.js"></script>
+</body>
+
+</html>

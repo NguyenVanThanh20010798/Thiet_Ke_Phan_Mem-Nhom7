@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./Assets/Css/chiTietSanPham.css">
+    <link rel="stylesheet" href="./Assets/Css/trangChu.css">
+    <link rel="stylesheet" href="./Assets/Css/Base.css">
+    <link rel="stylesheet" href="./Assets/Css/Toast.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/Front/fontawesome-6.2.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <script src="./Assets/data/product.js"></script>
+    <script src="./Assets/JS/Chung.js"></script>
+    <script src="./Assets/JS/Classes.js"></script>
+    <script src="./Assets/JS/chiTietSanPham.js"></script>
+    <script src="./Assets/JS/Toast.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <!-- Header navigation -->
+        <header class="header">
+            <div class="grid">
+                <script> addTopNav(); </script>
+
+                <!-- Header with search -->
+                <script> addHeader(); </script>
+            </div>
+        </header>
+
+        <!-- Main container -->
+        <div class="main__container">
+            <div class="grid">
+                <div class="grid__row main__content">
+                    <!-- Bread crumb -->
+                    <div class="bread-crumb">
+                        
+                    </div>
+
+                    <div class="product__wrap">
+                        <!-- Product detail label -->
+                        <div class="product-detail">
+                            <div class="product-img">
+                                <div id="product-img__big" class="product-img__big">
+                                    <img src="./Assets/Img/Hat_Giong/hat-giong-co-may-man.png" alt=""
+                                        class="product-img__big-img">
+                                </div>
+                                <div id="product-img__thumbnail" class="product-img__thumbnail">
+                                </div>
+                            </div>
+                            <div class="product-label__detail">
+                                <h1 class="product-name__detail"></h1>
+                                <div class="product-price__detail">
+                                    <span class="product-price-current"></span>
+                                </div>
+                                <p class="prouduct-des__detail">
+                                </p>
+                                <div class="product__cart">
+                                    <div class="product-buy">
+                                        <button class="product-btn__add-to-cart" onclick="showSuccessToast();addProductToCart(maProduct);">
+                                            <i class="fa-solid fa-cart-plus"></i>
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                        <div class="product-btn__buy">
+                                            <a href="thanhToan.html" class="product-btn__buy-link" onclick="addProductToCart(maProduct);">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-commit">
+                                <h3 class="product-label__commit">BEAUTIFUL TREE CAM KẾT:</h3>
+                                <ul class="product-commit__list">
+                                    <li class="product-commit__items">Cung cấp các loại cây cảnh đa dạng với giá hợp lý
+                                    </li>
+                                    <li class="product-commit__items">Miễn phí giao hàng cho đơn hàng trên
+                                        <strong>500.000đ</strong> (áp dụng tại các khu vực trong bán kính 20Km tính từ
+                                        nhà vườn)
+                                    </li>
+                                    <li class="product-commit__items">Tư vấn và hướng dẫn chăm sóc cây tận tình</li>
+                                    <li class="product-commit__items">Tư vấn kỹ lưỡng các vấn đề phong thuỷ, hợp mệnh -
+                                        hợp tuổi</li>
+                                    <li class="product-commit__items">Cho thuê cây cảnh văn phòng</li>
+                                    <li class="product-commit__items">Hỗ trợ đổi trả sản phẩm trong vòng <strong>3
+                                            ngày</strong> sau khi mua</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Product description -->
+                        <div class="product-description">
+                            <div class="product-description__label">
+                                <h2 class="product-description__content-label">
+                                    CHI TIẾT SẢN PHẨM
+                                </h2>
+                            </div>
+                            <div class="product-description__content">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Products -->
+                    <div class="product-related">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="grid__full-width">
+                <div class="grid__row">
+                    <script>addFooter();</script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="toast"></div>
+    <script>
+        addContainTaiKhoan();
+    </script>
+</body>
+
+</html>

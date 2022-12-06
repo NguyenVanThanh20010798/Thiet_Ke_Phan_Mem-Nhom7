@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Người Dùng</title>
+    <link rel="stylesheet" href="./Assets/Css/trangChu.css">
+    <link rel="stylesheet" href="./Assets/Css/nguoiDung.css">
+    <link rel="stylesheet" href="./Assets/Css/Base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/Front/fontawesome-6.2.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="./Assets/data/product.js"></script>
+    <script src="./Assets/JS/nguoiDung.js"></script>
+    <script src="./Assets/JS/Chung.js"></script>
+    <script src="./Assets/JS/Classes.js"></script>
+    <script src="./Assets/JS/Toast.js"></script>
+</head>
+<body>
+    <div class="main">
+        <!-- Header navigation -->
+        <header class="header">
+            <div class="grid">
+                <script> addTopNav(); </script>
+
+                <!-- Header with search -->
+                <script> addHeader(); </script>
+            </div>
+        </header>
+        <!-- Main container -->
+        <div class="main__container">
+            <div class="grid">
+                <div class="main__content">
+                    <div class="infoUser">
+
+                    </div>
+                    <div class="listDonHang"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+		addContainTaiKhoan();
+	</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triển Lãm</title>
+    <link rel="stylesheet" href="./Assets/Css/trienLam.css">
+    <link rel="stylesheet" href="./Assets/Css/Base.css">
+    <link rel="stylesheet" href="./Assets/Css/trangChu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/Front/fontawesome-6.2.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <script src="./Assets/data/product.js"></script>
+    <script src="./Assets/JS/Chung.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="grid">
+                <script> addTopNav(); </script>
+
+                <!-- Header with search -->
+                <script> addHeader(); </script>
+            </div>
+        </header>
+
+        <!-- Main container -->
+        <div class="main-container">
+            <div class="grid">
+                <div class="grid__row main__content">
+                    <div class="home-exhibition">
+                        <div class="grid__row home-exhibition__list">
+                            <div class="home-exhibition__label">
+                                <h1 class="home-exhibition__title">
+                                    TRIỂN LÃM
+                                </h1>
+                            </div>
+                            <div class="grid__column-2-6 home-exhibition__item">
+                                <img src="./Assets/Img/Trien_Lam/sam-nui.jpg" alt="Bonsai Sam Núi"
+                                    class="home-exhibition__item-img"
+                                    title="">
+                                <div class="home-exhibition__item-modal">
+                                    <span class="close">&times;</span>
+
+                                    <img class="home-exhibition__item-content">
+
+                                    <div class="home-exhibition__item-caption"></div>
+                                    <div class="home-exhibition__item-des"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./Assets/JS/trienLam.js"></script>
+    <script>
+        addContainTaiKhoan();
+    </script>
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+</body>
+
+</html>

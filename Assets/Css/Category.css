@@ -1,0 +1,88 @@
+.main-category__header {
+    height: 70px;
+    width: 100%;
+    margin-top: 120px;
+    background-color: #085b00;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.category__header {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+
+.category-filter {
+    display: flex;
+    padding: 12px 0;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.select-input__price {
+    margin-right: 20px;
+}
+
+.category-filter__page {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.category-filter__label {
+    color: var(--white-color);
+    font-size: 1.4rem;
+    margin-right: 16px;
+}
+
+.category-filter__btn {
+    margin-right: 12px;
+    min-width: 90px;
+}
+
+.category-filter__page-num {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-right: 22px;
+}
+
+.category-filter__page-current {
+    color: var(--primary-color);
+}
+
+.category-filter__page-control {
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    width: 72px;
+    height: 36px;
+}
+
+.category-filter__page-btn {
+    flex: 1;
+    display: flex;
+    background-color: var(--white-color);
+    text-decoration: none;
+}
+
+.category-filter__page-btn--disable {
+    cursor: default;
+    background-color: #F9F9F9;
+}
+
+.category-filter__page-btn--disable .category-filter__page-icon {
+    color: #CCC;
+}
+
+.category-filter__page-btn:first-child {
+    border-right: 1px solid #E8E8E8;
+}
+
+.category-filter__page-icon {
+    margin: auto;
+    font-size: 1.4rem;
+    color: #555;
+}
